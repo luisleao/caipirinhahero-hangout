@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<!-- The hangout API JavaScript. Always include this first -->
+<script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=0.1"></script>
+
+<!-- The JavaScript for this app. This must always be a full URL not a
+     relative path.
+     Tip: You can load it from a local web server such as
+     http://localhost/app.js for faster single user development -->
+<!--
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.7");</script> 
+	--> 
+	
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Caipirinha Hangout</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="//caipirinha-hangout.appspot.com/static/jquery-1.7.min.js"></script>
+	<script src="//caipirinha-hangout.appspot.com/static/app.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+
+</head>
+<style type="text/css">
+
+@charset "UTF-8";
+/* CSS Document */
+
+
+	#geral {
+		width: 955px;
+		margin: 0 auto;
+	}
+
+	body {
+		font-family: Verdana;
+		font-size: 10pt;
+	}
+	
+	#buttons {
+		top: 50px;
+		margin: 0 auto 20px;
+		padding: 0;
+		width: 100%;
+	}
+	#buttons ul {
+		background-repeat:no-repeat; 
+		padding: 0 0 0 10px; 
+		width: 100%;
+		height: 7px;
+		clear: both;
+		border-bottom: solid 1px #ddd;
+		margin-bottom: 15px;
+	}
+	#buttons li {
+		display: block;
+		float: left;
+		width: 12px;
+		height: 12px;
+		margin: 0 4px;
+		border-radius: 10px;
+		border: solid 2px #ddd;
+		background-color: #fff;
+		cursor: pointer;
+		font-size: 7pt;
+	}
+	#buttons li.title {
+		text-align: center;
+		width: 30px;
+		border: none;
+		cursor: default;
+		padding: 0 10px;
+	}
+	
+	#buttons li.active {
+		background-color: #ccef4c;
+		border-color: #ccef4c;
+	}
+	
+	#buttons li.active:hover {
+		border-color: #7638ce;
+	}
+	#buttons li:hover {
+		border-color: #7638ce;
+	}
+	#buttons ul:hover {
+		border-color: #7638ce;
+	}
+	
+	.espaco {
+		margin-right: 15px !important;
+	}
+	
+	#header {
+		width: 955px;
+		height: 100px;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		margin-top: 20px;
+		margin-bottom: 6px;
+	}
+	
+	
+	h1 {
+		position: absolute;
+		top: 25px;
+		margin-top: 0;
+		margin-left: 125px;
+		font-size: 40pt;
+		color: #7638ce;
+		font-weight: normal;
+		font-family: 'Arizonia', cursive;
+	}
+ </style>       
+
+<body>
+	
+<div id="geral">
+
+	<div id="header">
+		<img src="//caipirinha-hangout.appspot.com/static/logo_caipirinha.png" width="100" alt="Logo Caipirinha">
+		<h1>Caipirinha Hangout</h1>
+     </div>
+
+    <div id="buttons">
+		
+		<ul id="do">
+			<li class="title">DO</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="re">
+			<li class="title">RE</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="mi">
+			<li class="title">MI</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="fa">
+			<li class="title">FA</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="sol">
+			<li class="title">SOL</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="la">
+			<li class="title">LA</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco azul"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+		<ul id="si">
+			<li class="title">SI</li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco azul"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+			<li></li><li></li><li></li><li class="espaco"></li>
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div style="clear: both;"></div>
+
+</body>
+</html>
+
